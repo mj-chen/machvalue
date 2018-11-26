@@ -1,0 +1,199 @@
+
+.metiers{
+    .competitivite>p.title>span{
+        width:300px;
+    }
+   .competitivite> article{
+       @include article(23%);
+       @include folder-article;
+    }
+
+    @include tablet{
+     .competitivite>p.title>span{
+        width:535px;
+    }
+    .competitivite>article>div{
+        width:48%;
+        &:first-child>p:first-of-type{
+            margin-bottom: 30px;
+        }
+        &:last-child>h2, &:nth-child(3)>h2{
+            width:85px;
+        }
+    }
+    }
+    @include desktop{
+        .competitivite>article{
+            >div{
+                width:23%;
+            }
+            justify-content: space-between;
+        }
+    }
+    .reengineering>p.title>span{
+        width:235px;
+    }
+    .reengineering>article{
+        @include article(31%);
+        @include folder-article;
+        p:last-child{
+            margin-top: 25px;
+        }
+        >div:nth-of-type(2){
+            >h2{
+                width:100%;
+            }
+            >ul{
+                padding-left:1em;
+                li{
+                    list-style-type:disc;
+                }
+            }
+        }
+        >div:last-of-type>h2{
+            width:50%;
+        }
+    }
+    @include tablet{
+        .reengineering>p.title>span{
+            width:345px;
+        }
+        .reengineering>article{
+            p:last-child{
+                margin-top: 0;
+            }
+        >div:last-of-type>h2{
+            width:100%;
+        }
+        }
+    }
+    @include desktop{
+        .reengineering>article{
+            justify-content: space-between;
+        }
+    }
+    
+    .prospection-commerciale{
+        >p.title>span{
+            width:160px;
+        }
+        margin-bottom: 0;
+        >article{
+            @include article(31%);
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            >div:first-child{
+                flex:1 100%;
+            }
+            p{
+                margin-bottom: 20px;
+            }
+            >ul{
+
+                >li{
+                    font-family: "Playfair Display";
+                    margin-bottom: 20px;
+                    font-size: 18px;
+                    list-style-type: disc;
+                }
+            }
+        }
+        @include tablet{
+            >p.title>span{
+                width:330px;
+            }
+            >article{
+                justify-content: flex-start;
+                 p{
+                    margin-bottom: 0;
+                }
+                >ul{
+                    margin-left:10%;
+                }
+            }
+        }
+        @include desktop{
+            >article{
+                flex-wrap: wrap;
+            }
+        }
+    }
+    .prestations{
+        background-color: $main-red;
+        @include full-width;
+        padding:30px 12.5%;
+        color:white;
+        >p{
+            font-family: "Playfair Display";
+            font-size: 20px;
+            >span{
+                display: block;
+            }
+            margin-bottom: 40px;
+        }
+        >article{
+            display: flex;
+            justify-content:space-between;
+            flex-direction: column;
+            >div .number{
+                    font-size: 56px;
+                    font-family: "Syncopate";
+                    margin-right: 5px;
+            }
+        }
+        .etape{
+            display: flex;
+            align-items: center;
+            >p.line{
+                height: 1px;
+                width:100%;
+                border-top:1px solid white;
+            }
+            &::after{
+                border:1px solid white;
+                border-radius: 50%;
+                width:8px;
+                height:6px;
+                background-color: white;
+                content:" ";
+            }
+        }
+        @include tablet{
+            >article{
+                flex-direction: row;
+                flex-wrap: wrap;
+                >div{
+                    width:48%;
+                    &:first-child{
+                        margin-bottom: 50px;
+                    }
+                }
+            }
+        }
+        @include desktop{
+            padding:30px 10%;
+            >article{
+                flex-direction: row;
+                >div{
+                    width:22%;
+                }
+            }
+            .etape:last-of-type{
+                >p.line{
+                    display:none;
+                    &::after{
+                        width:0;
+                        height:0;
+                    }
+                }
+            }
+
+        }
+    }
+    .mentoring>article{
+        @include article(31%);
+        @include desktop{
+            justify-content: space-between;
+        }
+    }
+}

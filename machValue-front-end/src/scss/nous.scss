@@ -1,0 +1,419 @@
+
+.fondateur{
+    color:$main-font-color;
+    >main{
+        width:100%;
+        >*{
+            margin-bottom: 25px;
+        }
+        >img{
+            width:205px;
+            height:auto;
+        }
+    }
+      >aside{
+         @include skew-aside;
+        clear:both;
+        width:120%;
+        margin-left:-8%;
+        padding:30px 0;
+        >p{
+            margin:0 auto;
+            font-size: 16px;
+            width:83.5%;
+            color:$main-red;
+            font-weight: 700;
+            }
+        }
+    @include tablet{
+    >main{
+        width:100%;
+        height:auto;
+        clear: both;
+        >*{
+            display: inline-block;
+            margin-bottom: 0;
+        }
+        >img{
+            width:216px;
+            margin-right: 25px;
+            float:left;
+        }
+        >div{
+            margin-bottom: 30px;
+            width:calc(100% - 290px);
+            p:first-child{
+                margin-bottom: 10px;
+            }
+            span{
+                font-weight: 700;
+            }
+        }
+    }
+    >aside{
+        width:60%;
+        margin:20px 0 0 28.5%;
+        padding:40px 0 80px 0;
+        >p{
+            margin-left:16%;
+            font-size: 20px;
+            width:340px;
+        }
+    }
+
+    }
+    @include desktop{
+           >main{
+            width:68%;
+            >img{
+                width:260px;
+                margin-right:30px;
+            }
+        }
+        >aside{
+        margin:0 0 0 25%;
+        >p{
+            width:335px;
+        }
+    }
+    }
+   
+}
+
+.rencontres{
+    p.title>span{
+        width:205px;
+    }
+    >main{
+      >div{
+        p{
+            margin-bottom: 20px;
+        }
+        p.name{
+          font-display: 'Syncopate', sans-serif;
+          font-weight: 700;
+          font-size: 14px;
+          margin-bottom: 30px;
+        }
+        img{
+          width:205px;
+          height:auto;
+        }
+      }
+    }
+     >aside{
+        background-color: $main-gray;
+        position:relative;
+        z-index: 3;
+        padding:30px 0;
+        p{
+            position:relative;
+            z-index:3;
+            &:first-of-type{
+                margin-bottom: 20px;
+            }
+        }
+        &::before, &::after{
+            position:absolute;
+            top:0;
+            bottom:0;
+            content:'';
+            background-color:$main-gray;
+            width:60%;
+            transform:skew(-30deg);
+        }
+        &::before{
+            left:-30%;
+        }
+        &::after{
+            right:-30%;
+        }
+    }
+
+    @include tablet{
+        p>title>span{
+            width:412px;
+        }
+    >main{
+        margin-bottom: 60px;
+        position:relative;
+        >p:first-of-type{
+            position:absolute;
+        }
+        display:flex;
+        justify-content: space-between;
+        p.name{
+            width:260px;
+            text-align: left;
+        }
+        
+      >div:first-of-type{
+         width:66%;
+         img{
+             float:left;
+             margin-top: 0;
+            width:calc((100% - 37.5px)/2);
+         }
+         p:not(.name){
+             float:right;
+             width:calc((100% - 37.5px)/2 + 37.5px);
+             padding:0 12.5px 0 25px;
+         }
+      }
+      >div:last-of-type{
+          width:34%;
+          padding-left:12.5px;
+          >p:first-of-type{
+              position:absolute;
+              width:34%;
+              padding:0 12.5px;
+              top:calc(760px - 100%);
+              left: calc((100% - 50px)/3 + 12.5px);
+          }
+          >img{
+              width:100%
+          }
+          >p.red-text{
+              color:$main-red;
+          }
+      }
+    }
+      >aside{
+          width:70%;
+          margin:20px auto;
+          display:flex;
+          justify-content: space-between;
+          p:first-of-type{
+              margin-right: 20px;
+          }
+          &::after, &::before{
+            width:40%;
+            transform:skew(-30deg);
+          }
+          &::after{
+              right:-17%;
+          }
+          &::before{
+              left:-15.6%;
+          }
+    
+    }
+} 
+@include desktop{
+    margin-bottom:0;
+    >aside{
+         width:60%;
+         padding:30px 0;
+         &::before{
+             width:60%;
+             left:-40%
+         }
+         &::after{
+             width:48%;
+             right:-20%;
+         }
+    }
+}
+    
+}
+
+.valeur{
+    main{    
+        @include full-width;
+        padding:20px 12.5%;
+        color:white;
+        background-color: $main-red;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        >div{
+            svg{
+                display: none;
+            }
+            p{
+                width:141px;
+                margin-bottom: 30px;
+            }
+        }
+        >ul>li{
+            display: flex;
+            list-style-type: none;
+            margin-bottom: 10px;
+            >span{
+                &:first-child{
+                    font-size: 30px;
+                    width:25px;
+                }    
+                font-family: "Syncopate";
+                font-size: 12px;
+            }
+            p{
+                font-family: "Libre Baskerville", serif;
+                font-size: 13px;
+                margin: 0 10px 0 calc(2.2em + 10px);
+                max-width: 560px;
+                line-height: 1.5em;
+                text-indent: -2.2em;
+                >span{
+                    font-size: 35px;
+                    font-family: "Syncopate";
+                    vertical-align: bottom;
+                    margin:0 5px;
+                }
+                >.master{
+                    font-size: 10px;
+                    font-family: "Syncopate";
+                    font-weight: 700;
+                    line-height: 1.5;
+                    display: block;
+                    margin-left:calc(2.2em + 10px);
+                    margin-top:5px; 
+                }
+            }
+        }
+    }
+    @include tablet{
+        main{    
+        flex-direction: row;
+        display: flex;
+        justify-content: space-between;
+        >div{
+            width:15%;
+            margin-bottom: 0;
+            svg{
+                display: block;
+            }
+        }
+        >ul{
+            width:80%;
+        }
+    }
+    }
+    @include desktop{
+        main>ul>li{
+            p{
+                margin: 0 10px 0 calc(2.2em + 20px);
+                >.master{
+                    display: inline;
+                    margin:0;
+                }
+            }
+        }
+    }
+    
+}
+
+.atouts{
+    >main{
+        @include full-width;
+        // padding-right:12.5%;
+        background-color:$main-gray;
+        display: flex;
+        flex-direction: column;
+        height:auto;
+        .adv{
+           
+            >div{
+                width:50%;
+                padding:53px 0 103px 0;
+                transform: skew(40deg);
+                background-color: $black;
+                transform-origin: left top;
+                >p{ 
+                    transform: skew(-40deg);
+                    color:white;
+                    font-weight: 700;
+                    font-size: 22px;
+                    font-family: "Playfair Display";
+                    text-align: center;
+                }
+            }
+        }
+        .procedure{
+           padding:0 10%;
+            >p:first-of-type{
+                margin-bottom: 25px;
+            }
+            p>span{
+                font-weight: 700;
+            }
+            margin-bottom: 100px;
+        }
+    }
+    @include tablet{
+        >main{
+        padding-right:12.5%;
+        flex-direction: row;
+        height:auto;
+        justify-content: space-between;
+        .adv{
+            width:50%;
+        }
+        .procedure{
+            width:33%;
+            padding:0;
+
+        }
+    }
+    }
+    @include desktop{
+        >main{
+            justify-content: flex-start;
+    }
+
+    }
+    
+}
+
+.equipe{
+      main{
+        background-image: url("../assets/img/equip_background.jpg");
+        background-position: right;
+        background-size:cover;
+        background-repeat: no-repeat;
+        background-color: $main-red;
+        @include full-width;
+        padding: 20px 12.5% 10% 12.5%;
+        >div{
+            padding-left: 10px;
+            >div{
+                &:first-child{
+                    margin-bottom: 25px;
+                }
+            }
+            p{
+                color:white;
+            }
+            span{
+                font-weight: 700;
+            }
+        }
+    }
+    @include tablet{
+        main{
+        background-image: url("../assets/img/equipe_tablet_bg.jpg");
+        >div{
+            padding-left: 10px;
+            width:65%;
+            overflow: auto;
+            >div{
+                display: inline-block;
+                width:45%;
+                &:first-child{
+                    margin-right: 10%;
+                    float:left;
+                }
+            }
+            p{
+                color:white;
+            }
+            span{
+                font-weight: 700;
+            }
+        }
+    }
+
+    }
+  
+}
+
