@@ -4,7 +4,7 @@ import React from "react";
 
 const MachValueLogo = ({width}) =>
 <svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 376.8 155" xmlSpace="preserve" className="machValueLogo" width={width}>
+	 viewBox="0 30 376.8 100" xmlSpace="preserve" className="machValueLogo" width={width}>
 
 <g>
 	<polygon className="st0" points="15.2,46.6 31.8,46.6 44.1,63.7 44.1,87.2 	"/>

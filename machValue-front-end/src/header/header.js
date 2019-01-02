@@ -6,6 +6,10 @@ import Navigation from "./navigation";
 import { BrowserRouter as Router, Route, Link, Switch, Redirect } from 'react-router-dom';
 
 class Header extends Component{
+    constructor(props){
+        super(props);
+        this.header = React.createRef();
+    }
     componentDidMount = () => {
         window.addEventListener('scroll', this.handleOnScroll)
     }
@@ -18,23 +22,24 @@ class Header extends Component{
         if(window.innerWidth>=1024){
             const yScroll = window.scrollY
             if (yScroll > 50) {
-                document.getElementsByClassName("header")[0].classList.add("slim-header");
+               this.header.current.classList.add("slim-header");
             } else {
-                document.getElementsByClassName("header")[0].classList.remove("slim-header");
+               this.header.current.classList.remove("slim-header");
             } 
 
         }  
     }
 
     render(){
-        return <div className="header">
-        <Link to="/"> <SVGIcon name="machvalueLogo" id="machvaluelogo"/></Link>
+        return (
+        <div ref={this.header} className="header">
+            <Link to="/"> <SVGIcon name="machvalueLogo" id="machvaluelogo"/></Link>
             <div>
                 <Boite/>
                 <Menubar/>
             </div>
-            <Navigation />
-        </div>;
+            <Navigation changeLanguage={(lg)=>this.props.changeLanguage(lg)} language = {this.props.language}/>
+        </div>);
     }
 }
 

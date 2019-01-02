@@ -4,7 +4,8 @@ import SVGIcon from "../svgIcons/icons";
 import Plan from "../assets/img/Plan.png";
 import Footer from "../extra/footer";
 
-class Contact extends Component{
+class Contact extends Component{ 
+
    constructor(props){
      super(props);
      this.state={
@@ -19,8 +20,17 @@ class Contact extends Component{
        city:'',
        message:'',
        valide:true,
+       language:this.props.language,
      }
    }
+
+  componentDidUpdate(prevProps) {
+    if (this.props.language !== prevProps.language) {
+      this.setState({
+        language: this.props.language
+      });
+    }
+  }
 
    update=(ele)=>{
      const value = ele.value;
@@ -116,9 +126,9 @@ class Contact extends Component{
   }
 
     render(){
-        const {firstName,email,lastName,occupation,company,phone,addresse,postCode,city,message, valide}=this.state;
+        const {firstName,email,lastName,occupation,company,phone,addresse,postCode,city,message, valide, language}=this.state;
         return <div>
-            <Header />
+          <Header changeLanguage={(lg) => this.props.changeLanguage(lg)} language={this.state.language} />
             <div className="contact">
               <p className="sectionTitle">
                 <span>4. </span>
@@ -126,61 +136,72 @@ class Contact extends Component{
               </p>
               <div>
                 <div>
-                  <input name="lastName" placeholder="NOM*" type="text" value={lastName} data-validation="true" onChange={(e) => this.update(e.target)} />
+                  <input name="lastName" placeholder={language === "fr" ? "NOM*" : "NAME*"} type="text" value={lastName} data-validation="true" onChange={e => this.update(e.target)} />
                 </div>
                 <div>
-                  <input name="email" placeholder="MAIL*" type="email" value={email} data-validation="true" onChange={(e) => this.update(e.target)} />
+                  <input name="email" placeholder="EMAIL*" type="email" value={email} data-validation="true" onChange={e => this.update(e.target)} />
                 </div>
                 <div>
-                  <input name="firstName" placeholder="PR&Eacute;NOM*" value={firstName} type="text" data-validation="true" onChange={(e) => this.update(e.target)} />
+                  <input name="firstName" placeholder={language === "fr" ? "PRENOM*" : "FIRST NAME"} value={firstName} type="text" data-validation="true" onChange={e => this.update(e.target)} />
                 </div>
                 <div>
-                  <input name="occupation" placeholder="FONCTION" value={occupation} type="text" onChange={(e) => this.update(e.target)} />
+                  <input name="occupation" placeholder={language === "fr" ? "FONCTION" : "POSITION"} value={occupation} type="text" onChange={e => this.update(e.target)} />
                 </div>
                 <div>
-                  <input name="company" placeholder="SOCI&Eacute;T&Eacute;*" type="text" value={company} data-validation="true" onChange={(e) => this.update(e.target)} />
+                  <input name="company" placeholder={language === "fr" ? "SOCIETE*" : "COMPANY"} type="text" value={company} data-validation="true" onChange={e => this.update(e.target)} />
                 </div>
                 <div>
-                  <input name="phone" placeholder="TEL" type="phone" value={phone} onChange={(e) => this.update(e.target)} />
+                  <input name="phone" placeholder="TEL" type="phone" value={phone} onChange={e => this.update(e.target)} />
                 </div>
                 <div>
                   <div>
-                    <input name="addresse" placeholder="ADRESSE" type="addresse" value={addresse} onChange={(e) => this.update(e.target)} />
+                    <input name="addresse" placeholder={language === "fr" ? "ADRESSE" : "POSTAL ADDRESS"} type="addresse" value={addresse} onChange={e => this.update(e.target)} />
                   </div>
                   <div>
-                    <input name="postCode" placeholder="CODE POSTAL" type="text" value={postCode} onChange={(e) => this.update(e.target)} />
+                    <input name="postCode" placeholder={language === "fr" ? "CODE POSTAL" : "ZIP CODE"} type="text" value={postCode} onChange={e => this.update(e.target)} />
                   </div>
                   <div>
-                    <input name="city" placeholder="VILLE" type="text" value={city} onChange={(e) => this.update(e.target)} />
+                    <input name="city" placeholder={language === "fr" ? "VILLE" : "CITY"} type="text" value={city} onChange={e => this.update(e.target)} />
                   </div>
                 </div>
                 <div>
-                  <textarea name="message" placeholder="MESSAGE*" data-validation="true" value={message} onChange={(e) => this.update(e.target)} />
+                  <textarea name="message" placeholder="MESSAGE*" data-validation="true" value={message} onChange={e => this.update(e.target)} />
                 </div>
               </div>
-              <div>
-                <p>*champs obligatoires</p>
-                <p onClick={()=>this.sendMessage()} className={valide?'':'disabled'} >
-                  <span>ENVOYER</span> <SVGIcon name="boiteaulettre" width="35px" />
-                </p>
-              </div>
-                <p className="title">
-                    <span>NOUS TROUVER</span>
-                </p>
-                <section>
-              <img src={`/${Plan}`} />
-              <aside>
-                <h2>MachValue</h2>
-                <p>30, rue de la Varenne</p>
-                <p>94100 Saint-Maur-des-Foss&eacute;s</p>
-                <p>mob:+33 (0)6 89 09 08 63</p>
-                <p><em>max.pagniol@machvalue.com</em></p>
-              </aside>
+              {language === "fr" ? <div>
+                  <p>*champs obligatoires</p>
+                  <p onClick={() => this.sendMessage()} className={valide ? "" : "disabled"}>
+                    <span>ENVOYER</span> <SVGIcon name="boiteaulettre" width="35px" />
+                  </p>
+                </div> : <div>
+                  <p>*mandatory fields</p>
+                  <p onClick={() => this.sendMessage()} className={valide ? "" : "disabled"}>
+                    <span>SEND</span> <SVGIcon name="boiteaulettre" width="35px" />
+                  </p>
+                </div>}
 
-                </section>
+              <p className="title">
+                {
+                  language === 'fr'?
+                  <span>NOUS TROUVER</span>:
+                  <span>HOW TO FIND US</span>
+                }
+              </p>
+              <section>
+                <img src={`/${Plan}`} />
+                <aside>
+                  <h2>MachValue</h2>
+                  <p>30, rue de la Varenne</p>
+                  <p>94100 Saint-Maur-des-Foss&eacute;s</p>
+                  <p>mobile:+33 (0)6 89 09 08 63</p>
+                  <p>
+                    <em>max.pagniol@machvalue.com</em>
+                  </p>
+                </aside>
+              </section>
             </div>
-            <Footer/>
-            </div>     
+            <Footer language={this.state.language} />
+          </div>;     
     }
 }
 

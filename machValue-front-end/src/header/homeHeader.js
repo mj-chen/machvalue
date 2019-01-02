@@ -16,14 +16,13 @@ class HomeHeader extends Component {
 
     render() {
         return <div className="header homeheader">
-            <Flags/>
+            <Flags changeLanguage={(lg)=>this.props.changeLanguage(lg)}/>
             <Link to="/"> <SVGIcon name="mainmachvalueLogo" width="290px" /></Link>
             <div>
             <Link to="/contact"><Boite /></Link>
               <Menubar />
             </div>
-            <Navigation/>
-
+          <Navigation changeLanguage={(lg) => this.props.changeLanguage(lg)} language = {this.props.language}/>
           </div>;
     }
 }

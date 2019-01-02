@@ -6,7 +6,7 @@ const devMode = process.env.NODE_ENV !=='production';
 const autoprefixer = require('autoprefixer');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const copyWebPackPlugin = new CopyWebpackPlugin([{
-  from:'src/assets/img/favicon.ico'
+  from:'src/assets/img/favicon.png'
 }])
 const htmlPlugin = new HtmlWebPackPlugin({
     template:"./src/index.html",
@@ -14,14 +14,15 @@ const htmlPlugin = new HtmlWebPackPlugin({
 });
 
 const miniCssExtractPlugin = new MiniCssExtractPlugin({
-    filename:devMode?"[name].css":"[name].[hash].css",
-    chunkFilename:devMode?"[id].css":"[id].[hash].css",
+    filename:"[name].css",
+    chunkFilename:"[id].css",
 });
 
 const uglifyJsPlugin = new UglifyJsPlugin();
 const optimizeCSSAssetsPlugin = new OptimizeCSSAssetsPlugin();
 
 module.exports = {
+
   optimization: {
     minimizer: [uglifyJsPlugin, optimizeCSSAssetsPlugin],
     splitChunks:{
@@ -47,7 +48,7 @@ module.exports = {
       {
         test: /\.scss$/,
         use: [
-            devMode?"style-loader":MiniCssExtractPlugin.loader,
+            MiniCssExtractPlugin.loader,
             {loader:"css-loader", options:{sourceMap:true}},
             {loader:'postcss-loader', options:{sourceMap:true}},
             {loader:"sass-loader",options:{sourceMap:true}}
@@ -61,7 +62,6 @@ module.exports = {
       },
       {
         test: /\.(woff|woff2|eot|ttf|svg)$/,
-
         loader: "url-loader?limit=100000"
       }
     ]

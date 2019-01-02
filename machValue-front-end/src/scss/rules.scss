@@ -20,9 +20,7 @@ $desktop:1024px;
     @content;
   }
 }
-.hidden{
-  display: none;
-}
+
 @mixin full-width{
   width:125%;
   margin-left:-12.5%;
@@ -42,12 +40,18 @@ $desktop:1024px;
       margin-bottom: 10px;
     }
     border-bottom:1px solid #737373;
+    >div{
+      margin-top: 10px;
+      >*{   
+       width:100%;
+       margin-bottom: 10px;
+      }
+      .hidden{
+        display: none;
+      }
+    }
   }
-  p,ul{
-    display: none;
-    width:100%;
-    margin-bottom: 10px;
-  }
+ 
   @include tablet{
     >div{
       border:none;
@@ -55,9 +59,9 @@ $desktop:1024px;
       h2{
         margin:20px 0;
       }
-    }
-    p,ul{
-      display:block;
+      >div{
+        display: block;
+      }
     }
   }
 }
@@ -89,8 +93,7 @@ $desktop:1024px;
             width:65%;
             margin:15px 0;
         }
-  }
-     
+  }  
 }
  
 
@@ -116,10 +119,12 @@ $desktop:1024px;
     }
   >article{
     @include article(31%);
-    display:none;
     img{
       width:218px;
       height:auto;
+    }
+    &.hidden{
+      display: none;
     }
   }
   @include tablet {
@@ -127,12 +132,22 @@ $desktop:1024px;
       display: inline;
     }
     >article{
-      display: flex;
+      display: flex !important;
       justify-content: space-between;
        img{
         width:100%
       }
     }
   }
+  @include desktop{
+     >article{
+         >div:first-child{
+             width: 28%;
+         }
+         >div{
+             width:33%
+         }
+     }
+    }
 }
 

@@ -18,30 +18,47 @@ import {
 } from "react-router-dom";
 
 class Nous extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            hash: this.props.match,
-        };
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      language:this.props.language,
     }
+  }
+
+  componentDidUpdate(prevProps) {
+    if (this.props.language !== prevProps.language) {
+      this.setState({
+        language: this.props.language,
+      })
+    }
+  }
+ 
     render(){
-        console.log(this.props)
-        return <div>
-            <Header />
-            <div className="nous">
-              <p className="sectionTitle">
-                <span>1. </span>
-                QUI SOMMES NOUS?
-              </p>
-              <Fondateur /> 
-              <Rencontres />
-              <Valeur />
-              <Atouts />
-              <Equipe />
-              <Partenaire />
-            </div>
-            <Footer/>
-          </div>;
+        return(
+            <div>
+            <Header changeLanguage={(lg) => this.props.changeLanguage(lg)} language={this.state.language}/>
+                <div className="nous">{
+                  this.state.language === 'fr' ?
+                <p className="sectionTitle">
+                  <span>1. </span>
+                  QUI SOMMES - NOUS ?
+                </p>:
+                <p className="sectionTitle">
+                  <span>1. </span>
+                  ABOUT US
+                </p>
+                }
+                <Fondateur language={this.state.language} />
+                <Rencontres language={this.state.language} />
+                <Valeur language={this.state.language} />
+                <Atouts language={this.state.language} />
+                <Equipe language={this.state.language}/>
+                <Partenaire language={this.state.language} />
+              </div>
+            <Footer language={this.state.language}/>
+            </div> 
+        ) 
     }
 }
 

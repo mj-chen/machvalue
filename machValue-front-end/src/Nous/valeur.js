@@ -1,8 +1,76 @@
-import React from "react";
+import React,{Component} from "react";
 import SVGIcon from "../svgIcons/icons";
 
-const Valeur = () => {
-  return <div className="valeur" id="nos-valeurs">
+class Valeur extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      language: this.props.language,
+    }
+  }
+  componentDidUpdate(prevProps) {
+    if (this.props.language !== prevProps.language) {
+      this.setState({
+        language: this.props.language,
+      })
+    }
+  }
+
+  render(){
+    const maximes = [
+      {
+        id:1,
+        content: 'Quel que soit ton conseil, qu\'il soit bref',
+        contentEn: 'Whatever advise you give, be short',
+        author:'HORACE',
+      },
+      {
+        id: 2,
+        content: 'Je ne cherche pas à connaître les réponses, je cherche à comprendre les questions',
+        contentEn:'I seek not to know the answers, but to understand the questions',
+        author: ' CONFUCIUS',
+      },
+      {
+        id: 3,
+        content: 'N\'imitez rien, ni personne.Un lion qui imite un autre lion devient un singe',
+        contentEn:'Do not imitate anybody or anything. Lion who imitates a lion becomes a shade',
+        author: 'VICTOR HUGO',
+      },
+      {
+        id: 4,
+        content: 'Commencez par changer en vous ce que vous voulez changer autour de vous',
+        contentEn:'Be the change that you wish to see in the world',
+        author: 'GANDHI',
+      },
+      {
+        id: 5,
+        content: 'La résistance au changement n\'est que le refus de la croissance',
+        contentEn:'Resistance to change is only refusal of growth',
+        author: 'ALEXANDER RUPERTI',
+      },
+      {
+        id: 6,
+        content: 'On peut toujours plus que ce que l\'on croit pouvoir',
+        contentEn:'We can always do more than what we think we can',
+        author: ' JOSEPH KESSEL',
+      },
+      {
+        id: 7,
+        content: 'C\'est ce que nous pensons déjà connaître qui nous empêche souvent d\'apprendre',
+        contentEn:'It’s what we think we know that keeps us from learning',
+        author: 'GASTON BACHELARD',
+      },
+      {
+        id: 8,
+        content: 'Choisir, c\'est renoncer',
+        contentEn:'To choose is to renounce',
+        author: 'ANDRE GIDE',
+      }
+    ]
+ 
+   return (
+    this.state.language === 'fr'?
+    <div className="valeur" id="nos-valeurs">
         <p className="title">
           <span>NOS VALEURS</span>
         </p>
@@ -12,81 +80,45 @@ const Valeur = () => {
             <SVGIcon name="valeur" width="66px" />
           </div>
           <ul>
-            <li>
-              <span>1.</span>
-              <p>
-                <span>&laquo;</span> Quel que soit ton conseil, qu'il soit bref
-                <span>&raquo;</span>. <span className="master">
-                  HORACE
-                </span>
-              </p>
-            </li>
-            <li>
-              <span>2.</span>
-              <p>
-                <span>&laquo;</span> Je ne cherche pas &agrave; conna&icirc;tre les r&eacute;ponse, je cherche &agrave; comprendre les questions
-                <span>&raquo;</span>. <span className="master">
-                  CONFUCIUS.
-                </span>
-              </p>
-            </li>
-            <li>
-              <span>3.</span>
-              <p>
-                <span>&laquo;</span> N'imitez rien, ni personne. Un lion qui imite un autre lion devient un signe
-                <span>&raquo;</span>. <span className="master">
-                  VICTOR HUGO.
-                </span>
-              </p>
-            </li>
-            <li>
-              <span>4.</span>
-              <p>
-                <span>&laquo;</span> Commencez par changer en vous ce que vous voulez changer autour de vous
-                <span>&raquo;</span>. <span className="master">
-                  GANDHI.
-                </span>
-              </p>
-            </li>
-            <li>
-              <span>5.</span>
-              <p>
-                <span>&laquo;</span> La r&eacute;sistance au changement n'est que le refus de la croissance
-                <span>&raquo;</span>. <span className="master">
-                  ALEXANDER RUPERTI.
-                </span>
-              </p>
-            </li>
-            <li>
-              <span>6.</span>
-              <p>
-                <span>&laquo;</span> On peut toujours plus que ce que l'on croit pouvoir
-                <span>&raquo;</span>. <span className="master">
-                  JOSEPH KESSEL.
-                </span>
-              </p>
-            </li>
-            <li>
-              <span>7.</span>
-              <p>
-                <span>&laquo;</span> C'est ce que nous pensons d&eacute;j&agrave; conna&icirc;tre qui nous empeche souvent d'apprendre
-                <span>&raquo;</span>. <span className="master">
-                  GASTON BACHELARD.
-                </span>
-              </p>
-            </li>
-            <li>
-              <span>8.</span>
-              <p>
-                <span>&laquo;</span> Choisir, c'est renoncer
-                <span>
-                  &raquo;
-                </span>. <span className="master">ANDR&Eacute; GIDE</span>
-              </p>
-            </li>
+            {maximes.map(maxime => <li key={maxime.id}>
+               <span>{maxime.id}.</span>
+               <div>
+                  <p>
+                    <span>&laquo;</span>
+                     {maxime.content}
+                    <span>&raquo;</span><span>,</span>
+                    <span>{maxime.author}.</span>
+                  </p>
+               </div>
+            </li>)}
           </ul>
         </main>
-      </div>;
+      </div>:
+      <div className="valeur" id="nos-valeurs">
+        <p className="title">
+          <span>OUR VALUES</span>
+        </p>
+        <main>
+          <div>
+            <p>A few maxims in line with our way of action:</p>
+            <SVGIcon name="valeur" width="66px" />
+          </div>
+          <ul>
+            {maximes.map(maxime => <li key={maxime.id}>
+              <span>{maxime.id}.</span>
+              <div>
+                <p>
+                  <span>&laquo;</span>
+                  {maxime.contentEn}
+                  <span>&raquo;</span><span>,</span>
+                  <span>{maxime.author}.</span>
+                </p>
+              </div>
+            </li>)}
+          </ul>
+        </main>
+      </div>
+   )}
 };
 
 export default Valeur;

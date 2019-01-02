@@ -10,10 +10,7 @@ class Flags extends Component {
 
     render() {
         return <div className="flags">
-            <Link to="/english">
-              {" "}
-              <img src={`/${uk}`} alt="uk" />
-            </Link>
+            <img src={`/${uk}`} alt="uk" onClick={()=>this.props.changeLanguage('en')} />
             <Link to="/china">
               {" "}
               <img src={`/${cn}`} alt="china" />
@@ -21,9 +18,9 @@ class Flags extends Component {
             <Link to="/south-korea">
               <img src={`/${kr}`} alt="south korea" />
             </Link>
-            <Link to="/">
-              <img src={`/${fr}`} alt="france" />
-            </Link>
+           
+          <img src={`/${fr}`} alt="france" onClick={() => this.props.changeLanguage('fr')} />
+            
           </div>;
     }
 }
