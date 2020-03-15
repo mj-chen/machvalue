@@ -96,8 +96,7 @@ export class Nav extends Component  {
                       to="/nous#rencontres-fondatrices"
                       scroll={el => navigateTo(el)}
                     >
-                    启发人
-                      
+                    创始人经历    
                     </HashLink>): (
                         <HashLink
                           to="/nous#rencontres-fondatrices"
@@ -380,7 +379,9 @@ export class Nav extends Component  {
                     </Link>
               ) : language === "korea" ? (
                 <Link to="/comp&eacute;tences">조직역량</Link>
-              ) : (
+              ) : language === "cn"? (
+                    <Link to="/comp&eacute;tences">公司能力</Link>
+              ): (
                     <Link to="/comp&eacute;tences">OUR SKILLS</Link>
                   )}
             </span>
@@ -405,7 +406,7 @@ export class Nav extends Component  {
                       to="/comp&eacute;tences#m&eacute;thodologie"
                       scroll={el => navigateTo(el)}
                     >
-                      方法论
+                      解决方案
                         </HashLink>):(
                         <HashLink
                           to="/comp&eacute;tences#m&eacute;thodologie"
@@ -436,7 +437,7 @@ export class Nav extends Component  {
                       to="/comp&eacute;tences#rencontres"
                       scroll={el => navigateTo(el)}
                     >
-                      启发人
+                      创始人经历
                         </HashLink>):(
                         <HashLink
                           to="/comp&eacute;tences#rencontres"

@@ -1,8 +1,6 @@
 import React, {Component} from 'react';
 import { Link } from "react-router-dom";
 
-
-
 class ArticleList extends Component{
     constructor(props) {
         super(props);
@@ -29,7 +27,7 @@ class ArticleList extends Component{
     render(){
         return(
             <ul ref={this.list}>
-                {this.props.articles.map((article)=>
+                {this.props.articles.reverse().map((article)=>
                     <li key={article.id} className='hidden'>
                         <p>{article.date}</p>
                         <h6>{article.title}</h6>

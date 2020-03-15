@@ -8,7 +8,6 @@ class ArticleWithGallery extends Component {
     this.articleRef = React.createRef();
     this.state = {
       slideIndex: 1,
-      article: this.props.articleContent
     };
   }
 
@@ -26,7 +25,7 @@ class ArticleWithGallery extends Component {
 
   showSlides = n => {
     if (this.articleRef.current) {
-      const slidesLength = this.state.article.images.length;
+      const slidesLength = this.props.article.images.length;
       let trueIndex = n;
       if (n > slidesLength) {
         trueIndex = 1;
@@ -53,7 +52,7 @@ class ArticleWithGallery extends Component {
   };
 
   render() {
-    const { article } = this.state;
+    const { article } = this.props;
     return (
       <article>
         <h5>{article.title}</h5>
