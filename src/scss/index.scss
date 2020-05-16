@@ -1253,9 +1253,13 @@ img {
         >div{
             font-size:14px;
             margin-top: 20px;
-            >p{
+            >p, >ul{
                 margin-bottom:10px;
+                >li:not(:last-child){
+                    margin-bottom: 5px;
+                }
             }
+            
         }
     }
 

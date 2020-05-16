@@ -36,7 +36,11 @@ import a15t from "../assets/article15t/a15t.jpg";
 import a16 from "../assets/article16/a16.png";
 import a17 from "../assets/article17/a17.png";
 import a18 from "../assets/article18/a18.jpg";
+import a19 from "../assets/article19/a19.png";
 import a20 from "../assets/article20/a20.jpg";
+import a23 from "../assets/article23/a23.jpg";
+import a24 from "../assets/article24/a24.jpg";
+import a25 from "../assets/article25/a25.jpg";
 import Footer from "../extra/footer";
 import Header from "../header/header";
 
@@ -351,7 +355,7 @@ class Articles extends Component {
         }
       ],
       title:'Henri MOREL, élu Président de la Fédération des Industries Mécaniques pour un mandat de 3 ans.',
-      id:'15bis'
+      id:'16'
     },
     {
       text:
@@ -365,7 +369,7 @@ class Articles extends Component {
         }
       ],
       title:'ARCHITECT@WORK à PARIS',
-      id:'15ter'
+      id:'17'
     },
     {
       text: <Fragment>
@@ -385,7 +389,7 @@ class Articles extends Component {
         }
       ],
       title: "Learning Expedition COREE du SUD - SEOUL",
-      id:'16'
+      id:'18'
     },
     {
       text: <p>Le MEDEF International propose, en <b>partenariat</b> avec <b>Business France</b> de participer à cette délégation qui se rendra 
@@ -398,7 +402,7 @@ class Articles extends Component {
         }
       ],
       title: "Délégation à l’Asian Infrastructure Investment Bank (AIIB) - PEKIN",
-      id:'17'
+      id:'19'
     },
     {
       text:
@@ -415,7 +419,35 @@ class Articles extends Component {
         }
       ],
       title:'Salon Mondial du BATIMENT à Paris- Villepinte. BATIMAT, INTERCLIMA, IDEOBAINS…Toujours là !!!',
-      id:'18'
+      id:'20'
+    },
+    {
+      text:<>
+      <p><b>Mr Cédric O, Secrétaire d’Etat chargé du Numérique</b> auprès du ministre de l’Économie et des Finances et du ministre de l’Action et des Comptes publics, 
+      s’est rendu en <b>Corée du Sud, du 4 au 8 novembre 2019</b>. 
+      Il s’agit de sa première visite en tant que membre du gouvernement français. 
+      Il a rencontré plus particulièrement à ce titre <b>Mme PARK Young-sun, ministre des PME et des
+      Startups (MSS) et les agences sous tutelle (KISED, KOSME anciennement SBC, KVIC)</b>.
+      </p>
+
+      <p>L’objectif de ce voyage était de <b>renforcer les liens bilatéraux</b> entre les deux pays en élargissant les relations dans le <b>domaine de l’innovation</b>; 
+      ceci se confirmant par la <b>signature de plusieurs M.O.U.</b> faisant intervenir la French Tech. 
+      Il profita pour rencontrer également plusieurs dirigeants de grands groupes et institutions financières comme Samsung Electronics, 
+      Naver, Hyundai Motor Corp., LGChem, Korea Investment Corp.
+      </p>
+
+      <p>Mr O a rappelé que <b>:« La Corée du Sud est aujourd’hui la 11ème économie mondiale et le 5ème exportateur. 
+        La France est le 5ème investisseur européen dans ce pays. La Corée du Sud est pour la France un partenaire de tout premier plan en Asie ».</b></p>
+      </>,
+      date:'04 au 08 Novembre 2019',
+      images:[
+        {
+          url:a19,
+          alt:'Mme PARK & Mr O'
+        }
+      ],
+      title:'Déplacement de Mr Cédric O en Corée',
+      id:'21'
     },
     {
       text:<>
@@ -444,7 +476,78 @@ class Articles extends Component {
         }
       ],
       title:'Délégation de Marseille au JAPON.',
-      id:'19'
+      id:'22'
+    },
+    {
+      text:<p>
+        Ce webinaire réunira Mr <b>David-Pierre JALICON</b>, Président de la FKCCI et Pdg de DPJ & Partners Architecture, S.E.M. 
+        <b>Philippe LEFORT</b>, Ambassadeur de France en Corée, Mr <b>Chang HUH</b>, 
+        Vice-Ministre au ministère de l’économie et des finances en charge des affaires internationales (MOEF), 
+        Mr <b>Sang-Hyun CHANG</b>, Pdg d’Invest Korea, Mr <b>­Mathieu ELIE</b>, 
+        V.Pdg de la zone Asie Pacifique du groupe Guerbet et Secrétaire Général du Club Santé Corée, 
+        et enfin Mr <b>Sébastien FALLETTI</b>, journaliste, correspondant Asie de l’Est pour le Figaro.
+        </p>,
+      date:'09 Avril 2020',
+      images:[
+        {
+          url:a23,
+          alt:'Webinaire FKCCI'
+        }
+      ],
+      title:'FKCCI présente comment la Corée a géré le COVID 19',
+      id:'23'
+    },
+    {
+      text:<>
+      <p>Mr <b>Sébastien FALLETTI</b>, journaliste, correspondant Asie de l’Est pour le Figaro a très bien résumé en fin du Webinaire organisé par la FKCCI combien et comment les occidentaux ne sont pas sérieux et préparés à de telles crises sanitaires. </p>
+      <ul>
+        <li>
+          <b>1/.Réactivité:</b> Au pays du pali-pali, c’est-à-dire vite-vite, les coréens n’ont pas attendu de voir les évolutions du virus. 
+           Ils ont fait le choix inverse de nos grands dirigeants, ne mettant pas en même temps leur économie à l’arrêt. 
+           Pas de confinement.
+        </li>
+        <li>
+          <b>2/.Mobilisation:</b> des acteurs étatiques et privés sans attendre, avec une capacité à vivre avec le risque mais en prenant le taureau par les cornes.
+        </li>
+        <li>
+          <b>3/.Tests Massifs:</b> d’entrée, on veut regard=garder les choses en face! On identifie, on isole et ensuite on traite; on va au-devant des problèmes! 20 000 tests quotidien.
+        </li>
+        <li>
+          <b>4/.Tracking:</b> on trace dès le début,… car on Corée on pense au collectif avant sa personne; c’est une question de culture…Max Pagniol rajoute: on ne fait pas dans la démagogie tout en sachant faire la différence entre tolérance et laxisme.
+        </ li>
+        <li>
+          <b>5/.Cohésion de la population:</b> Chacun se construit dans le collectif, donc la responsabilité collective est immédiate car personne ne veut contaminer le voisin.
+        </li>
+      </ul>
+      <p>Max Pagniol résume le bilan à ses amis français: crise démarrée le 4 février 2020. Le 18/02, identification de la super propagatrice. Distribution des masques, 2 par jour pour 2,3 euros. Politique des 3T : test, track, treat. A date du 9 avril 2020, 10384 contaminés, 6776 guéris, 204 morts!!! Une économie qui continue à fonctionner, et 150 Milliards d’investissements : cherchez l’erreur……….</p>
+      </>,
+       date:'09 Avril 2020',
+       images:[
+         {
+           url:a24,
+           alt:'Sébastien FALLETTI'
+         }
+       ],
+       title:'Une leçon à prendre de l’exemple coréen dans sa gestion du COVID 19….',
+      id:'24'
+    },
+    {
+      text:<>
+        <p>La Corée est un pays très réactif, ils ont la culture de la crise !!!</p>
+        <p><b>Tests Massifs</b> d’entrée, on veut regarder les choses en face donc 20 000 tests sont faits au quotidien.</p>
+        <p>Ensuite mise en place, dès le début, du traçage (<b>Tracking</b>) pour identifier et suivre les cas. </p>
+        <p>On poursuit par le traitement (<b>Treating</b>) dans des hôpitaux « spécialisés » assurant l’efficience et la non propagation du virus. De plus le parc d’hôpitaux par habitant est 3 fois supérieur à la moyenne de l’OCDE.</p>
+        <p>Enfin et pour finir, et ce n’est pas le moindre, une <b>participation collective </b>pour «gagner la guerre» ……. Nous sommes au stade de la volonté, ils sont au stade de la <b>volition</b>…c’est ça la différence. </p>
+      </>,
+      date:'09 avril 2020',
+      images:[
+        {
+          url:a25,
+          atl:'Politique des 3 T en Corée du Sud contre COVID 19'
+        }
+      ],
+      title:'Politique des 3 T en Corée du Sud contre COVID 19',
+      id:'25'
     }
   ];
 

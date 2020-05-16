@@ -136,7 +136,7 @@ class Actualites extends Component {
         resume: "Culture d’innovation bottom up pour transformer vos organisations avec VOTRE ingéniosité, l’ingéniosité de VOS EQUIPES..."
       },
       {
-        id:'15bis',
+        id:'16',
         date:"19 Juin 2019",
         title:`Henri MOREL, élu Président de la Fédération des
         Industries Mécaniques pour un mandat de 3 ans.`,
@@ -145,7 +145,7 @@ class Actualites extends Component {
         dernières années pour définir une Organisation Professionnelle du futur...`
       },
       {
-        id:'15ter',
+        id:'17',
         date:'26 au 27 Septembre 2019',
         title:'ARCHITECT@WORK à PARIS',
         resume:`Magnifique réunion professionnelle présentant les dernières
@@ -153,20 +153,20 @@ class Actualites extends Component {
         grande qualité sur le thème « Architecture &amp; Economie Circulaire ».`
       },
       {
-        id: '16',
+        id: '18',
         date: "16 au 18 Octobre 2019",
         title: "Learning Expedition COREE du SUD - SEOUL",
         resume: `MEDEF International propose de participer à cette Learning Expedition afin de mieux comprendre comment 
                 la Corée du Sud a accompli son important développement économique depuis 50 ans...`,
       },
       {
-        id: '17',
+        id: '19',
         date: "28 au 30 Octobre 2019",
         title: "Délégation à l’Asian Infrastructure Investment Bank (AIIB) - PEKIN",
         resume: `Le MEDEF International propose, en partenariat avec Business France de participer à cette délégation qui se rendra à PEKIN pour...`
       },
       {
-        id:'18',
+        id:'20',
         date:'Du 4 au 8 novembre 2019',
         title:`Salon Mondial du BATIMENT à Paris-
         Villepinte. BATIMAT, INTERCLIMA, IDEOBAINS…Toujours là !!!`,
@@ -174,12 +174,41 @@ class Actualites extends Component {
         nombre de visiteurs, artisans, entreprises, collectivités et architectes.`
       },
       {
-        id:'19',
+        id:'21',
+        date:'04 au 08 Novembre 2019',
+        title:`Déplacement de Mr Cédric O en Corée`,
+        resume:`Mr Cédric O, Secrétaire d’Etat chargé du Numérique auprès du ministre de l’Économie et des Finances et du ministre de l’Action et des Comptes publics, s’est rendu en Corée du Sud, du 4 au 8 novembre 2019. Il s’agit de sa première visite en tant que membre du gouvernement français.`
+      },
+      {
+        id:'22',
         date:'09 au 14 Décembre 2019',
         title:'Délégation de Marseille au JAPON',
         resume:`Lors de la première quinzaine de décembre 2019, une mission
         économique de MARSEILLE s'est rendue à TOKYO, au JAPON au
         Forum de l'Innovation...`
+      },
+      {
+        id:'23',
+        date:'09 Avril 2020',
+        title:'FKCCI présente comment la Corée a géré le COVID 19',
+        resume:`Ce webinaire réunira Mr David-Pierre JALICON, 
+        Président de la FKCCI et Pdg de DPJ & Partners Architecture, 
+        S.E.M. Philippe LEFORT, Ambassadeur de France en Corée...`
+      },
+      {
+        id:'24',
+        date:'09 Avril 2020',
+        title:'Une leçon à prendre de l’exemple coréen dans sa gestion du COVID 19….',
+        resume:`Mr Sébastien FALLETTI, journaliste, correspondant Asie de l’Est pour le Figaro a très bien résumé en 
+        fin du Webinaire organisé par la FKCCI combien et comment les occidentaux ne sont pas sérieux et préparés à 
+        de telles crises sanitaires...`
+      },
+      {
+        id:'25',
+        date:'09 Avril 2020',
+        title:'Politique des 3 T en Corée du Sud contre COVID 19',
+        resume:`La Corée est un pays très réactif, ils ont la culture de la crise !!!
+        Tests Massifs d’entrée, on veut regarder les choses en face donc 20 000 tests sont faits au quotidien...`
       }
     ];
     const pageNum = Math.ceil(articles.length / this.state.num);
