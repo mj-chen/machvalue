@@ -15,9 +15,13 @@ class Article extends Component {
                     article? (
                         <>
                         <h5>{article.title}</h5>
-                        <div className='img'>
-                            <img src={article.images[0].url} alt={article.images[0].alt} />
-                        </div>
+                        {
+                            article.images && (
+                                <div className='img'>
+                                    <img src={article.images[0].url} alt={article.images[0].alt} />
+                                </div>
+                            )
+                        }
                         <div>{article.text}</div>
                         </>
                     ):(

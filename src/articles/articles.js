@@ -41,6 +41,19 @@ import a20 from "../assets/article20/a20.jpg";
 import a23 from "../assets/article23/a23.jpg";
 import a24 from "../assets/article24/a24.jpg";
 import a25 from "../assets/article25/a25.jpg";
+import a26 from "../assets/article26/a26.jpg";
+import a27a from "../assets/article27/a27a.jpg";
+import a27aP from "../assets/article27/a27aP.jpg";
+import a27b from "../assets/article27/a27b.png";
+import a27bP from "../assets/article27/a27bP.png";
+import a27c from "../assets/article27/a27c.png";
+import a27cP from "../assets/article27/a27cP.png";
+import a27d from "../assets/article27/a27d.jpg";
+import a27dP from "../assets/article27/a27dP.jpg";
+import a28a from "../assets/article28/a28a.png";
+import a28b from "../assets/article28/a28b.jpg";
+import a28aP from "../assets/article28/a28aP.png";
+import a28bP from "../assets/article28/a28bP.jpg";
 import Footer from "../extra/footer";
 import Header from "../header/header";
 
@@ -548,6 +561,107 @@ class Articles extends Component {
       ],
       title:'Politique des 3 T en Corée du Sud contre COVID 19',
       id:'25'
+    },
+    {
+      text:<>
+        <p>
+          Le Conseil d’Administration Extraordinaire <b>UFME (Union des Fabricants de Menuiseries)</b> a élu à l’unanimité Bruno CADUDAL 
+          à la Présidence pour un mandat renouvelable d’un an. Il succède à Robert DOLLAT qui occupait ce poste ces deux dernières années. 
+          Par la même occasion, l’UFME a constitué son nouveau bureau. Après s’être battue durant plusieurs années pour les aides fiscales 
+          au remplacement de fenêtres, l’UFME entre dans une nouvelle ère, avec pour objectif principal de développer le réseau d’adhérents 
+          afin de renforcer sa représentativité et notamment sur les sujets liés à l’environnement.
+        </p>
+        <p>
+          <b>Bruno CADUDAL</b> est Président d’Atlantem, activité menuiserie du Groupe HERIGE depuis dix-huit ans. 
+          Il est issu d’une formation d’ingénieur agro-alimentaire (ENSAIA - 1987), complétée d’un master de management (ICG - 1995).  
+        </p>
+      </>,
+      date:'04 jun 2020',
+      images:[
+        {
+          url:a26,
+          atl:'Bruno Cadudal'
+        }
+      ],
+      title:'un nouveau Président pour UFME, Bruno CADUDAL',
+      id:'26'
+    },
+    {
+      text:<>
+        <p>Beaucoup d’intérêts pour les nouveaux matériaux et des thèmes de réflexion toujours aussi captivants.</p>
+      </>,
+      date:'24 & 25 septembre 2020',
+      images:[
+        {
+          url:a27a,
+          petit:a27aP,
+          alt:'Architect@work'
+        },
+        {
+          url:a27b,
+          petit:a27bP,
+          alt:'Architect@work'
+        },
+        {
+          url:a27c,
+          petit:a27cP,
+          alt:'Architect@work'
+        },
+        {
+          url:a27d,
+          petit:a27dP,
+          alt:'Architect@work'
+        },
+
+      ],
+      title:'Encore un succès pour Architect@Work à Paris Event Center',
+      id:'27',
+      gallery: true,
+    },
+    {
+      text:<>
+      <p>
+        Les professionnels satisfaits du futur nouveau salon <b>BATIMAT</b> qui revient à Paris Expo Porte de Versailles du <b>3 au 6 octobre 2022</b>. 
+        Ce retour à Paris et ce nouveau calendrier biennal, en année paire, s’accompagnent d’un <b>concept d’exposition revu</b> et d’une <b>offre 
+        digitale enrichie</b>.
+      </p>
+      <p>
+        Pour rappel et dans la même veine, le salon <b>ÉQUIPBAIE-MÉTALEXPO</b>, organisé par Reed Expositions décalé en raison de la pandémie de la COVID-19, 
+        organisé par Reed Expositions, tiendra lui aussi sa prochaine édition du 21 au 24 septembre 2021 à Paris Porte de Versailles – Hall 1. 
+      </p>
+      </>,
+      date:'9 novembre 2020',
+      title:'BATIMAT de retour à la Porte de Versailles pour 2022!',
+      id:'28'
+    },
+    {
+      text:<>
+        <p>
+          <b>MUTARES</b> groupe coté qui détient actuellement 18 sociétés, générant un chiffre d'affaires total annuel de 1,8 milliard d'euros 
+          va prendre le contrôle du fabricant et distributeur d’équipements de la maison LAPEYRE, qui emploie 3500 salariés dans ses 10 usines et ses 126 magasins en France. 
+          Cette opération doit être terminée courant du 1er trimestre 2021, et s’accompagnera du versement au groupe munichois d’une soulte de 245 millions d’euros 
+          (et oui…adieu les fleurons français…) pour tenir compte des pertes accumulées par Lapeyre depuis 2012, année où ses comptes sont tombés dans le rouge. 
+        </p>
+        <p>
+          Ancien dirigeant de Castorama, Brico Dépôt et Conforama, « <b>Marc TENART</b> renforcera, en qualité de président, l'équipe de direction de Lapeyre », a immédiatement annoncé MUTARES.
+        </p>
+      </>,
+      date:'9 novembre 2020',
+      images:[
+        {
+          url:a28a,
+          petit:a28aP,
+          alt:'Lapeyre'
+        },
+        {
+          url:a28b,
+          petit:a28bP,
+          alt:'Marc Tenart'
+        }
+      ],
+      title:'le groupe Saint-Gobain cède LAPEYRE au fonds allemand MUTARES',
+      id:'29',
+      gallery: true,
     }
   ];
 

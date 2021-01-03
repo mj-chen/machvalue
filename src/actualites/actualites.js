@@ -209,6 +209,32 @@ class Actualites extends Component {
         title:'Politique des 3 T en Corée du Sud contre COVID 19',
         resume:`La Corée est un pays très réactif, ils ont la culture de la crise !!!
         Tests Massifs d’entrée, on veut regarder les choses en face donc 20 000 tests sont faits au quotidien...`
+      },
+      {
+        
+        date:'04 jun 2020',
+        resume:`Le Conseil d’Administration Extraordinaire UFME (Union des Fabricants de Menuiseries) a élu à l’unanimité Bruno CADUDAL 
+          à la Présidence pour un mandat renouvelable d’un an.`,
+        title:'un nouveau Président pour UFME, Bruno CADUDAL',
+        id:'26'
+      },
+      {
+        date:'24 & 25 septembre 2020',
+        resume:`Beaucoup d’intérêts pour les nouveaux matériaux et des thèmes de réflexion toujours aussi captivants`,
+        title:'Encore un succès pour Architect@Work à Paris Event Center',
+        id:'27'
+      },
+      {
+        resume:`Les professionnels satisfaits du futur nouveau salon BATIMAT qui revient à Paris Expo Porte de Versailles du 3 au 6 octobre 2022...`,
+        date:'9 novembre 2020',
+        title:'BATIMAT de retour à la Porte de Versailles pour 2022!',
+        id:'28'
+      },
+      {
+        resume:`MUTARES groupe coté qui détient actuellement 18 sociétés va prendre le contrôle du fabricant et distributeur d’équipements de la maison LAPEYRE...`,
+        date:'9 novembre 2020',
+        title:'le groupe Saint-Gobain cède LAPEYRE au fonds allemand MUTARES',
+        id:'29'
       }
     ];
     const pageNum = Math.ceil(articles.length / this.state.num);
